@@ -59,11 +59,6 @@ prompt_git() {
 	fi;
 }
 
-# get the name of the git branch between ()
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
-}
-
 if tput setaf 1 &> /dev/null; then
 	tput sgr0; # reset colors
 	bold=$(tput bold);
@@ -124,7 +119,7 @@ PS1+="\[${blue}\]@";
 PS1+="\[${hostStyle}\]\h"; # host
 PS1+="\[${white}\] : ";
 PS1+="\[${green}\]\w"; # working directory full path
-PS1+="\[${white}\] on \[${violet}\]parse_git_branch";
+PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\" \"\[${blue}\]\")"; # Git repository details
 PS1+="\n";
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;
