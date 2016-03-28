@@ -11,7 +11,7 @@ unset file;
 
 if [ `hostname` = 'ryanairdb.corp.dropbox.com' ] || [ `hostname` == 'ryan-mbp.corp.dropbox.com' ]; then
     echo "Loading Dropbox settings..."
-    source .dropbox
+    source .dropboxrc
 fi
 
 # Case-insensitive globbing (used in pathname expansion)
