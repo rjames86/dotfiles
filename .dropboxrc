@@ -9,6 +9,8 @@ alias ppss="PYTHONPATH=~/dev/support_server /usr/bin/python"
 alias gfr="git fetch && git rebase"
 alias v="vagrant"
 
+alias lrt="ssh -N -L 3000:127.0.0.1:8082 172.16.30.182"
+
 function out {
     SERVER_REPO=~/dev/server
 
@@ -37,3 +39,9 @@ function out {
         fi
 
     fi
+
+function crev {
+         REV=$(git rev-parse HEAD)
+         echo "Copying rev $REV"
+         echo $REV | pbcopy
+}
