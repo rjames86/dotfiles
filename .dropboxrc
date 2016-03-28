@@ -11,34 +11,6 @@ alias v="vagrant"
 
 alias lrt="ssh -N -L 3000:127.0.0.1:8082 172.16.30.182"
 
-function out {
-    SERVER_REPO=~/dev/server
-
-    if [ -n "$2" ]; then
-        SUBDOMAIN="$2";
-    else
-        SUBDOMAIN="www";
-    fi
-
-    PUBLISHED_REV=$(curl -s https://$SUBDOMAIN.dropbox.com/server_rev)
-
-    LIVE="Revision is live."
-    NOT_LIVE="Revision is not live."
-
-    if [ "$1" == "$PUBLISHED_REV" ]; then
-
-        echo $LIVE;
-
-    else
-
-        REV_LIST=$(git -C $SERVER_REPO rev-list $1..$PUBLISHED_REV)
-        if [ -n "$REV_LIST" ]; then
-            echo $LIVE;
-        else
-            echo $NOT_LIVE;
-        fi
-
-    fi
 
 function crev {
          REV=$(git rev-parse HEAD)
