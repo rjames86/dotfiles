@@ -1,0 +1,34 @@
+alias ..='cd ..'
+alias ...='cd ../..'
+alias back='cd "$OLDPWD"'
+alias ls='ls -l'
+alias scripts='cd "$DROPBOX_PERSONAL/Scripts"'
+
+alias grep='grep --color=auto'
+alias top='top -o cpu'
+
+# Open things in Sublime Text
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+# copy the working directory path
+alias cpwd='pwd|tr -d "\n" | pbcopy'
+
+# reload your bash config
+alias src="source ~/.bash_profile"
+
+# share history between terminal sessions
+alias he="history -a" # export history
+alias hi="history -n" # import history
+
+# Add SSH Keys
+alias addrjames='ssh-add ~/.ssh/rjames_rsa'
+
+
+# Find todo items that are assigned to me.
+alias todo='ga_code_search "TODO\(ryan\)"'
+
+# Find merge conflicts that need to be resolved.
+alias conf='ga_code_search <<<<'
+
+# Find anything below your CWD.
+alias ccs='ga_code_search'

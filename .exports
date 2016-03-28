@@ -1,0 +1,13 @@
+# Make emacs the default editor.
+export EDITOR='emacs';
+
+# Colors
+export LS_OPTIONS='--color=auto'
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+# Basic options
+export HISTTIMEFORMAT='%F %T %t'
+export HISTCONTROL=ignoredups
+export HISTSIZE=5000
+export HISTFILESIZE=1000000
