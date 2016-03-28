@@ -9,6 +9,11 @@ for file in ~/.{colors,path,bash_prompt,exports,aliases,functions,git_bash_compl
 done;
 unset file;
 
+if [ `hostname` = 'ryanairdb.corp.dropbox.com' ] || [ `hostname` == 'ryan-mbp.corp.dropbox.com' ]; then
+    echo "Loading Dropbox settings..."
+    source .dropbox
+fi
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 

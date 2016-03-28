@@ -1,0 +1,39 @@
+## Dropbox Aliases
+alias dev="cd ~/src"
+alias ss="cd ~/dev/support_server"
+alias ssa="cd ~/dev/support_server_alt"
+alias dbc="cd ~/dev/support_server; PYTHONPATH=. ipython -i console.py"
+alias pp="PYTHONPATH=."
+alias ppss="PYTHONPATH=~/dev/support_server /usr/bin/python"
+
+alias gfr="git fetch && git rebase"
+alias v="vagrant"
+
+function out {
+    SERVER_REPO=~/dev/server
+
+    if [ -n "$2" ]; then
+        SUBDOMAIN="$2";
+    else
+        SUBDOMAIN="www";
+    fi
+
+    PUBLISHED_REV=$(curl -s https://$SUBDOMAIN.dropbox.com/server_rev)
+
+    LIVE="Revision is live."
+    NOT_LIVE="Revision is not live."
+
+    if [ "$1" == "$PUBLISHED_REV" ]; then
+
+        echo $LIVE;
+
+    else
+
+        REV_LIST=$(git -C $SERVER_REPO rev-list $1..$PUBLISHED_REV)
+        if [ -n "$REV_LIST" ]; then
+            echo $LIVE;
+        else
+            echo $NOT_LIVE;
+        fi
+
+    fi
