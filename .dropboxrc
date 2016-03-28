@@ -1,10 +1,11 @@
 ## Dropbox Aliases
 alias dev="cd ~/src"
-alias ss="cd ~/dev/support_server"
-alias ssa="cd ~/dev/support_server_alt"
-alias dbc="cd ~/dev/support_server; PYTHONPATH=. ipython -i console.py"
+alias ss="cd ~/src/support_server"
+alias ssa="cd ~/src/support_server_alt"
+alias dbc="cd ~/src/support_server; PYTHONPATH=. ipython -i console.py"
 alias pp="PYTHONPATH=."
-alias ppss="PYTHONPATH=~/dev/support_server /usr/bin/python"
+alias ppss="PYTHONPATH=~/src/support_server /usr/bin/python"
+alias cdc="cd ~/src/server/commandcenter"
 
 alias gfr="git fetch && git rebase"
 alias v="vagrant"
