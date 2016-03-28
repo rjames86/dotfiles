@@ -64,7 +64,7 @@ if [[ "$TERM" != "screen" ]] &&
     WHOAMI=$(whoami)
     if tmux has-session -t $WHOAMI 2>/dev/null; then
         echo "Attaching to existing session"
-        tmux -2 attach-session -t $WHOAMI
+        tmux -2 attach-session -d -t $WHOAMI
     else
         echo "Creating new tmux session"
         tmux -2 new-session -s $WHOAMI
