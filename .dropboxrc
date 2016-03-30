@@ -12,6 +12,7 @@ alias v="vagrant"
 
 alias lrt="ssh -N -L 3000:127.0.0.1:8082 172.16.30.182"
 
+x=$(arc shell-complete);complete -W "${x}" arc;unset x
 
 function crev {
          REV=$(git rev-parse HEAD)
