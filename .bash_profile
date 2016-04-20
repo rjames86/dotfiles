@@ -56,7 +56,7 @@ complete -F _complete_ssh_hosts ssh
 complete -W "NSGlobalDomain" defaults;
 
 
-if [[ "$TMUX" != "" ]] &&
+if [[ "$TMUX" == "" ]] &&
         [[ "$SSH_CONNECTION" != "" ]]; then
     # Attempt to discover a detached session and attach
     # it, else create a new session
