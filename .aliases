@@ -14,7 +14,8 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias cpwd='pwd|tr -d "\n" | pbcopy'
 
 # reload your bash config
-alias src="source ~/.bash_profile"
+# alias src="source $HOME/.bash_profile"
+alias src="sh $DOTFILES_DIR/bootstrap.sh -f"
 
 # share history between terminal sessions
 alias he="history -a" # export history
