@@ -8,6 +8,10 @@ function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
 	--exclude "README.md" -avh --no-perms . ~;
     echo "export DOTFILES_DIR=\"$(pwd)\"" >> $HOME/.exports
+
+    for f in $HOME/bin; do
+    	chmod +x "$f"
+    done
 	source ~/.bash_profile;
 }
 
