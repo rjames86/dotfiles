@@ -28,10 +28,9 @@ _complete_ec_commands ()
         rebuild
         config
 EOF
-    COMPREPLY=( $(compgen -W "${comp_ssh_hosts}" -- $cur))
+    COMPREPLY=( $(compgen -W "${commands}" -- $cur))
     return 0
 }
-complete -F _complete_ec_commands ec
 
 _arc ()
 {
@@ -55,6 +54,7 @@ _arc ()
   COMPREPLY=( $(compgen -W "${OPTS}" -- ${CUR}) )
 }
 complete -F _arc -o filenames arc
+complete -F _complete_ec_commands ec
 
 function crev {
          REV=$(git rev-parse HEAD)
