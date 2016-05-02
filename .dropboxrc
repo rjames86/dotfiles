@@ -12,6 +12,26 @@ alias v="vagrant"
 
 alias lrt="ssh -N -L 3000:127.0.0.1:8082 172.16.30.182"
 
+_complete_ec_commands ()
+{
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    read -d '\n' commands << EOF
+        prep-system
+        self-update
+        mount
+        umount
+        status
+        start
+        stop
+        update
+        rebuild
+        config
+EOF
+    COMPREPLY=( $(compgen -W "${comp_ssh_hosts}" -- $cur))
+    return 0
+}
+complete -F _complete_ec_commands ec
 
 _arc ()
 {
