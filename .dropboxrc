@@ -61,3 +61,8 @@ function crev {
          echo "Copying rev $REV"
          echo $REV | pbcopy
 }
+
+# Need to set my global email address on work machine
+MYEMAIL=$(dscl . -read /Users/`whoami` EMailAddress | awk '{print $2}')
+git config --global user.email "$MYEMAIL"
+unset MYEMAIL
