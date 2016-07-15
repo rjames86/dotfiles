@@ -33,3 +33,7 @@ alias conf='ga_code_search <<<<'
 
 # Find anything below your CWD.
 alias ccs='ga_code_search'
+
+
+# Disable security cameras
+alias killcam="ssh kvothe.local 'osascript /Users/rjames/Dropbox/Scripts/securityspy/deactivate_securityspy.scpt'"
