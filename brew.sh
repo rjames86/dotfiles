@@ -13,3 +13,7 @@ brew update
 
 # Upgrade any already-installed formulae.
 brew upgrade --all
+
+brew install reattach-to-user-namespace
+
+brew cleanup
