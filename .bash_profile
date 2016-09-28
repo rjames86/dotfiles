@@ -55,12 +55,8 @@ complete -F _complete_ssh_hosts ssh
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults;
 
-
-if [[ "$TMUX" == "" ]] &&
-        [[ "$SSH_CONNECTION" != "" ]]; then
-    # Attempt to discover a detached session and attach
-    # it, else create a new session
-
+_start_tmux ()
+{
     WHOAMI=$(whoami)
     if tmux has-session -t $WHOAMI 2>/dev/null; then
         echo "Attaching to existing session"
@@ -69,4 +65,12 @@ if [[ "$TMUX" == "" ]] &&
         echo "Creating new tmux session"
         tmux -2 new-session -s $WHOAMI
     fi
+}
+
+
+if [[ "$TMUX" == "" ]] &&
+        [[ "$SSH_CONNECTION" != "" ]]; then
+    # Attempt to discover a detached session and attach
+    # it, else create a new session
+    _start_tmux
 fi

@@ -111,3 +111,7 @@ function ga_code_search() {
         subl `eval $LINE`
     fi
 }
+
+function gogo() {
+    _start_tmux
+}
