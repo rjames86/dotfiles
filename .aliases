@@ -7,9 +7,6 @@ alias scripts='cd "$DROPBOX_PERSONAL/Scripts"'
 alias grep='grep --color=auto'
 alias top='top -o cpu'
 
-# Open things in Sublime Text
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-
 # copy the working directory path
 alias cpwd='pwd|tr -d "\n" | pbcopy'
 

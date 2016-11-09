@@ -1,3 +1,15 @@
+# Open things in Sublime Text
+subl () {
+    subl="/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
+
+    if [[ $# -eq 0 ]] ; then
+        TO_OPEN="."
+    else
+        TO_OPEN="$1"
+    fi
+    "$subl" "$TO_OPEN"
+}
+
 extract () {
     if [ -f $1 ] ; then
     case $1 in
