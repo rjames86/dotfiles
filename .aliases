@@ -6,6 +6,7 @@ alias scripts='cd "$DROPBOX_PERSONAL/Scripts"'
 
 alias grep='grep --color=auto'
 alias top='top -o cpu'
+alias dev='cd ~/dev'
 
 # copy the working directory path
 alias cpwd='pwd|tr -d "\n" | pbcopy'
@@ -18,9 +19,6 @@ alias src="sh $DOTFILES_DIR/bootstrap.sh -f"
 alias he="history -a" # export history
 alias hi="history -n" # import history
 
-# Add SSH Keys
-alias addrjames='ssh-add ~/.ssh/rjames_rsa'
-
 
 # Find todo items that are assigned to me.
 alias todo='ga_code_search "TODO\(ryan\)"'
@@ -30,7 +28,6 @@ alias conf='ga_code_search <<<<'
 
 # Find anything below your CWD.
 alias ccs='ga_code_search'
-
 
 # Disable security cameras
 alias killcam="ssh kvothe.local 'osascript /Users/rjames/Dropbox/Scripts/securityspy/deactivate_securityspy.scpt'"
