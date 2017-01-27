@@ -14,6 +14,10 @@ if [ `hostname` = 'ryanairdb.corp.dropbox.com' ] || [ `hostname` == 'ryan-mbp.co
     source .dropboxrc
 fi
 
+if [[ -a /usr/local/bin/virtualenvwrapper.sh ]]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
