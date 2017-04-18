@@ -17,6 +17,6 @@ export HOMEBREW_NO_ANALYTICS=1
 export DROPBOX_PERSONAL=$(python -c "import json;f=open('$HOME/.dropbox/info.json', 'r').read();data=json.loads(f);print data.get('personal', {}).get('path', '')")
 
 # Require that pip installations be inside a virtualenv
-export PIP_REQUIRE_VIRTUALENV=true
+export PIP_REQUIRE_VIRTUALENV=false
 
 export WORKON_HOME=$HOME/.virtualenvs
