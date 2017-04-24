@@ -12,7 +12,6 @@ function doIt() {
     for f in $HOME/bin; do
     	chmod +x "$f"
     done
-	source ~/.bash_profile;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
@@ -24,4 +23,5 @@ else
 		doIt;
 	fi;
 fi;
+source ~/.bash_profile;
 unset doIt;
