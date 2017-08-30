@@ -4,9 +4,19 @@ cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;
 
+function iPython() {
+    iPythonConfigPath=`ipython locate profile`;
+    if [ ! -z "$iPythonConfigPath" ]
+    then
+        startupPath="$iPythonConfigPath/startup"
+        rsync -avh --no-perms ipython/ "$startupPath"
+    fi
+
+}
+
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-	--exclude "README.md" -avh --no-perms . ~;
+	--exclude "README.md" --exclude "ipython" -avh --no-perms . ~;
     echo "export DOTFILES_DIR=\"$(pwd)\"" >> $HOME/.exports
 
     for f in $HOME/bin; do
