@@ -34,5 +34,6 @@ else
 		doIt;
 	fi;
 fi;
+echo 'Sourcing ~/.bash_profile'
 source ~/.bash_profile;
 unset doIt;
