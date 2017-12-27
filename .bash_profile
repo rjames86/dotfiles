@@ -1,5 +1,5 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$HOME/.local:/usr/local/sbin:$PATH";
+export PATH="$HOME/bin:$HOME/.local:/usr/local/sbin:$HOME/.npm-packages/bin:$PATH";
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -8,11 +8,6 @@ for file in ~/.{colors,path,bash_prompt,exports,aliases,functions,git_bash_compl
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
-
-if [ `hostname` = 'ryanairdb.corp.dropbox.com' ] || [ `hostname` == 'ryan-mbp.corp.dropbox.com' ]; then
-    echo "Loading Dropbox settings..."
-    source .dropboxrc
-fi
 
 if [[ -a /usr/local/bin/virtualenvwrapper.sh ]]; then
     source /usr/local/bin/virtualenvwrapper.sh
