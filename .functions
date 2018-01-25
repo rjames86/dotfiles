@@ -128,4 +128,8 @@ function gogo() {
     _start_tmux
 }
 
+function gitopen() {
+    open "$(git config --get remote.origin.url)/tree/$(prompt_git)";
+}
+
 
