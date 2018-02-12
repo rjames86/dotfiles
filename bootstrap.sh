@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")";
+pushd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;
 
@@ -37,3 +37,5 @@ fi;
 echo 'Sourcing ~/.bash_profile'
 source ~/.bash_profile;
 unset doIt;
+
+popd;
