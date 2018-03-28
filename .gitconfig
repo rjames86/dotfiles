@@ -30,11 +30,6 @@
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
     type = cat-file -t
     dump = cat-file -p
-    ccchanges = log \
-                --pretty=format:'%h %an %ad %Cgreen%s' \
-                --date=short \
-                --since='5 days ago' \
-                -- '/Users/ryan/src/server/commandcenter'
     dsf = "!f() { [ -z "$GIT_PREFIX" ] || cd "$GIT_PREFIX" && git diff --color "$@" | diff-so-fancy | less --tabs=4 -RFX; }; f"
 [filter "media"]
     clean = git-media-clean %f
