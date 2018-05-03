@@ -8,7 +8,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # Basic options
 export HISTTIMEFORMAT='%F %T %t'
-export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoredups:erasedups
 export HISTSIZE=5000
 export HISTFILESIZE=1000000
 export HOMEBREW_NO_ANALYTICS=1
