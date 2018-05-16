@@ -30,4 +30,4 @@ alias conf='ga_code_search <<<<'
 alias ccs='ga_code_search'
 
 # Disable security cameras
-alias killcam="ssh kvothe.local 'osascript /Users/rjames/Dropbox/Scripts/securityspy/deactivate_securityspy.scpt'"
+alias killcam="ssh mini.local 'osascript /Users/rjames/Dropbox/Scripts/securityspy/deactivate_securityspy.scpt'"
