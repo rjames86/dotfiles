@@ -132,4 +132,8 @@ function gitopen() {
     open "$(git config --get remote.origin.url)/tree/$(prompt_git)";
 }
 
+function gitpr() {
+    open "$(git config --get remote.origin.url)/compare/$(prompt_git)?expand=1";
+}
+
 
