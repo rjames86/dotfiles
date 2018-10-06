@@ -20,3 +20,5 @@ export DROPBOX_PERSONAL=$(python -c "import json;f=open('$HOME/.dropbox/info.jso
 export PIP_REQUIRE_VIRTUALENV=false
 
 export WORKON_HOME=$HOME/.virtualenvs
+
+export PYTHONPATH=/usr/local/lib/python3.7/site-packages:$PYTHONPATH
