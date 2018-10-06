@@ -1,5 +1,5 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$HOME/.local:/usr/local/sbin:$HOME/.npm-packages/bin:$PATH";
+export PATH="/usr/local/bin:$HOME/bin:$HOME/.local:/usr/local/sbin:$HOME/.npm-packages/bin:$PATH";
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
