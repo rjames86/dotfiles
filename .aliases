@@ -24,7 +24,7 @@ alias hi="history -n" # import history
 alias todo='ga_code_search "TODO\(ryan\)"'
 
 # Find merge conflicts that need to be resolved.
-alias conf='ga_code_search <<<<'
+alias conf='ga_code_search "<<<<"'
 
 # Find anything below your CWD.
 alias ccs='ga_code_search'
