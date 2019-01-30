@@ -21,7 +21,8 @@ alias hi="history -n" # import history
 
 
 # Find todo items that are assigned to me.
-alias todo='ga_code_search "TODO\(ryan\)"'
+alias todome='ga_code_search "TODO\(ryan\)"'
+alias todo='ga_code_search "TODO"'
 
 # Find merge conflicts that need to be resolved.
 alias conf='ga_code_search "<<<<"'
