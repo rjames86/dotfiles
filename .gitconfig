@@ -27,6 +27,7 @@
     com = commit
     st = status
     br = branch
+    prunetags = fetch --prune --prune-tags --verbose
     hist = log --pretty=format:'%h %ad | %s [%an]' --graph --date=short
     type = cat-file -t
     dump = cat-file -p
