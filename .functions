@@ -10,6 +10,20 @@ subl () {
     "$subl" "$TO_OPEN"
 }
 
+# Open things in VS Code
+vscode () {
+    local vscode="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
+
+    if [[ $# -eq 0 ]] ; then
+        TO_OPEN="."
+    else
+        TO_OPEN="$1"
+    fi
+    "$vscode" "$TO_OPEN"
+}
+
+
+
 extract () {
     if [ -f $1 ] ; then
     case $1 in
