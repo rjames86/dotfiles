@@ -22,6 +22,8 @@
 [core]
     autocrlf = input
     safecrlf = true
+[fetch]
+    prune = true
 [alias]
     co = checkout
     com = commit
@@ -36,4 +38,3 @@
     clean = git-media-clean %f
     smudge = git-media-smudge %f
 [init]
-
