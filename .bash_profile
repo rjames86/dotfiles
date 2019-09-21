@@ -67,9 +67,9 @@ _start_tmux ()
 }
 
 
-if [[ "$TMUX" == "" ]] &&
-        [[ "$SSH_CONNECTION" != "" ]]; then
-    # Attempt to discover a detached session and attach
-    # it, else create a new session
-    _start_tmux
-fi
+# if [[ "$TMUX" == "" ]] &&
+#         [[ "$SSH_CONNECTION" != "" ]]; then
+#     # Attempt to discover a detached session and attach
+#     # it, else create a new session
+#     _start_tmux
+# fi
