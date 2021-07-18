@@ -9,9 +9,9 @@ for file in ~/.{colors,path,bash_prompt,exports,aliases,functions,git_bash_compl
 done;
 unset file;
 
-# if [[ -a /usr/local/bin/virtualenvwrapper.sh ]]; then
-#     source /usr/local/bin/virtualenvwrapper.sh
-# fi
+#if [[ -a /usr/local/bin/virtualenvwrapper.sh ]]; then
+#    source /usr/local/bin/virtualenvwrapper.sh
+#fi
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;

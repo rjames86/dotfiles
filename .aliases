@@ -4,6 +4,8 @@ alias back='cd "$OLDPWD"'
 alias ls='ls -l'
 alias scripts='cd "$DROPBOX_PERSONAL/Scripts"'
 
+alias python='python3'
+alias pip='pip3'
 alias grep='grep --color=auto'
 alias top='top -o cpu'
 alias dev='cd ~/dev'
@@ -12,7 +14,6 @@ alias dev='cd ~/dev'
 alias cpwd='pwd|tr -d "\n" | pbcopy'
 
 # reload your bash config
-# alias src="source $HOME/.bash_profile"
 alias src="source $DOTFILES_DIR/bootstrap.sh -f"
 
 # share history between terminal sessions
@@ -29,6 +30,3 @@ alias conf='ga_code_search "<<<<"'
 
 # Find anything below your CWD.
 alias ccs='ga_code_search'
-
-# Disable security cameras
-alias killcam="ssh mini.local 'osascript /Users/rjames/Dropbox/Scripts/securityspy/deactivate_securityspy.scpt'"

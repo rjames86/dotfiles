@@ -14,7 +14,7 @@ export HISTFILESIZE=1000000
 export HOMEBREW_NO_ANALYTICS=1
 
 # Paths
-export DROPBOX_PERSONAL=$(python -c "import json;f=open('$HOME/.dropbox/info.json', 'r').read();data=json.loads(f);print data.get('personal', {}).get('path', '')")
+export DROPBOX_PERSONAL=$(python -c "import json;data=json.load(open('/Users/rjames/.dropbox/info.json', 'r'));print(data.get('personal', {}).get('path', ''))")
 
 # Require that pip installations be inside a virtualenv
 export PIP_REQUIRE_VIRTUALENV=false
